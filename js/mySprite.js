@@ -1,19 +1,20 @@
 class mySprite {
-  constructor(x, y, width, height, color) {
+  constructor(x, y, width, height, imagePath) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.color = "grey";
-    this.active=false;
-    this.depth=0
+    this.active = false;
+    this.depth = 0;
 
+    this.image = loadImage(imagePath);
   }
   display() {
     push();
-    rectMode(CENTER);
-    fill(this.color);
-    rect(this.x, this.y, this.width, this.height);
+    imageMode(CENTER);
+
+    image(this.image, this.x, this.y, this.width, this.height);
     pop();
   }
   isClicked() {

@@ -48,22 +48,22 @@ class Game {
       form = new Form();
       form.display();
     }
-    p11 = new mySprite(375, 375, 20, 20);
-    p12 = new mySprite(375, 375, 20, 20);
-    p13 = new mySprite(375, 375, 20, 20);
-    p14 = new mySprite(375, 375, 20, 20);
-    p21 = new mySprite(375, 375, 20, 20);
-    p22 = new mySprite(375, 375, 20, 20);
-    p23 = new mySprite(375, 375, 20, 20);
-    p24 = new mySprite(375, 375, 20, 20);
-    p31 = new mySprite(375, 375, 20, 20);
-    p32 = new mySprite(375, 375, 20, 20);
-    p33 = new mySprite(375, 375, 20, 20);
-    p34 = new mySprite(375, 375, 20, 20);
-    p41 = new mySprite(375, 375, 20, 20);
-    p42 = new mySprite(375, 375, 20, 20);
-    p43 = new mySprite(375, 375, 20, 20);
-    p44 = new mySprite(375, 375, 20, 20);
+    p11 = new mySprite(375, 375, 20, 20, "../images/red.png");
+    p12 = new mySprite(375, 375, 20, 20, "../images/red.png");
+    p13 = new mySprite(375, 375, 20, 20, "../images/red.png");
+    p14 = new mySprite(375, 375, 20, 20, "../images/red.png");
+    p21 = new mySprite(375, 375, 20, 20, "../images/blue.png");
+    p22 = new mySprite(375, 375, 20, 20, "../images/blue.png");
+    p23 = new mySprite(375, 375, 20, 20, "../images/blue.png");
+    p24 = new mySprite(375, 375, 20, 20, "../images/blue.png");
+    p31 = new mySprite(375, 375, 20, 20, "../images/yellow.png");
+    p32 = new mySprite(375, 375, 20, 20, "../images/yellow.png");
+    p33 = new mySprite(375, 375, 20, 20, "../images/yellow.png");
+    p34 = new mySprite(375, 375, 20, 20, "../images/yellow.png");
+    p41 = new mySprite(375, 375, 20, 20, "../images/green.png");
+    p42 = new mySprite(375, 375, 20, 20, "../images/green.png");
+    p43 = new mySprite(375, 375, 20, 20, "../images/green.png");
+    p44 = new mySprite(375, 375, 20, 20, "../images/green.png");
 
     //players = [p1, p2, p3, p4];
     players = [
@@ -73,7 +73,7 @@ class Game {
       [p41, p42, p43, p44],
     ];
     console.log(players);
-    homeSprite = new mySprite(375, 375, 50, 50, "white");
+    homeSprite = new mySprite(375, 375, 50, 50, "../images/1.jpg");
 
     // homeSprite = createSprite(375, 375, 100, 100);
     this.getTurn();
@@ -313,14 +313,14 @@ class Game {
           800,
           400
         );
-        var newButton =createButton("New Game")
-        newButton.position(displayWidth/2,200)
-        newButton.mousePressed(()=>{
+        var newButton = createButton("New Game");
+        newButton.position(displayWidth / 2, 200);
+        newButton.mousePressed(() => {
           player.updateCount(0);
           game.update(0);
           location.reload();
         });
-        
+
         for (var i = 1; i < 5; i++) {
           var pegindex = "peg" + i;
           players[index - 1].x = allPlayers[plr][pegindex].x;
